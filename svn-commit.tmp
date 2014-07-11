@@ -1,0 +1,12 @@
+Added basic Gpu solver for calculating sum from 1 to n and a test Example class.
+--This line, and those below, will be ignored--
+
+AM   moose
+A    Demos/snippets/testExampleClass.py
+M    Makefile
+A    hsolve/GpuSolver.cu
+A    hsolve/GpuSolver.h
+M    hsolve/HSolvePassive.cpp
+M    hsolve/Makefile
+M    examples/Makefile
+M    examples/Example.cpp
