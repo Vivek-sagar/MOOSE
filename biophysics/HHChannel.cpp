@@ -462,6 +462,7 @@ void HHChannel::process( const Eref& e, ProcPtr info )
 	double B = 0;
 	if ( Xpower_ > 0 ) {
 		xGate_->lookupBoth( Vm_, &A, &B );
+		//xGate_->gpu_.sayHi();
 		if ( instant_ & INSTANT_X )
 			X_ = A/B;
 		else 

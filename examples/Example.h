@@ -1,4 +1,7 @@
+#ifndef EXAMPLE_H
+#define EXAMPLE_H
 
+#include "../hsolve/GpuSolver.h"
 
 class Example {
 
@@ -6,6 +9,8 @@ class Example {
         double x_;
         double y_;
         double output_;
+
+	GpuInterface gpu;
 
     public:
 
@@ -27,3 +32,4 @@ class Example {
         static const Cinfo* initCinfo();
 
 }; 
+#endif

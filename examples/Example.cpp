@@ -2,7 +2,6 @@
 #include "Example.h"
 #include "ElementValueFinfo.h"
 #include "LookupElementValueFinfo.h"
-#include "../hsolve/GpuSolver.h"
 #include <stdio.h>
 
 static SrcFinfo1< double > *output() {
@@ -109,9 +108,8 @@ void Example::process( const Eref& e, ProcPtr p )
     x_ = count;
 
     //Parallel summation from 1 to n, using a GpuInterface object
-    GpuInterface obj;
-    obj.setY(y_);
-    std::cout << obj.calculateSum()<<std::endl;
+    gpu.setY(y_);
+    std::cout << gpu.calculateSum()<<std::endl;
 }
 
 void Example::reinit( const Eref& e, ProcPtr p )

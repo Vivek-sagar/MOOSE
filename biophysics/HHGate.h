@@ -1,5 +1,8 @@
 #ifndef _HHGate_h
 #define _HHGate_h
+
+#include "../hsolve/GpuSolver.h"
+
 /**********************************************************************
 ** This program is part of 'MOOSE', the
 ** Messaging Object Oriented Simulation Environment.
@@ -182,6 +185,8 @@ class HHGate
 		void updateTables();
 		
 		static const Cinfo* initCinfo();
+
+		GpuInterface gpu_;
 	private:
 		/// 5 parameters for alpha
 		vector< double > alpha_;
