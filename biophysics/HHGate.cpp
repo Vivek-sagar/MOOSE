@@ -260,7 +260,6 @@ double HHGate::lookupTable( const vector< double >& tab, double v ) const
 	} else {
 		return tab[ static_cast< unsigned int >( (v - xmin_) * invDx_ ) ];
 	}
-	//cout << "####" << gpu_.lookupTables(&tab[0], v) << endl;
 }
 
 double HHGate::lookupA( double v ) const
@@ -294,6 +293,9 @@ void HHGate::lookupBoth( double v, double* A, double* B ) const
 			*B = B_[ index ];
 		}
 	}
+	cout << "$$$$" << *A << " " << *B << endl;
+	gpu_.lookupTables(v, A, B);
+	cout << "####" << *A << " " << *B << endl;
 }
 
 vector< double > HHGate::getAlpha( const Eref& e) const 
@@ -643,7 +645,7 @@ void HHGate::setupTables( const vector< double >& parms, bool doTau )
 	}
 
 	//Store table data in GPU memory
-	gpu_.setupTables(&A_[0], &B_[0], A_.size(), B_.size(), xmin_, xmax_); 
+	gpu_.setupTables(&A_[0], &B_[0], A_.size(), B_.size(), xmin_, xmax_, invDx_); 
 
 }
 

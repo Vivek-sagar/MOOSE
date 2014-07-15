@@ -9,12 +9,14 @@ class GpuInterface
                 int asize;
 		double *A_d, *B_d;
 		double *A_, *B_;
+		int ASize_, BSize_;
 		double xmin_, xmax_;
+		double invDx_;
 
                 GpuInterface();
 		void sayHi();
-		void setupTables(double*, double*, double, double, double, double);
-		double lookupTables(double*, double);
+		void setupTables(double*, double*, double, double, double, double, double);
+		void lookupTables(double&, double*, double*) const;
                 int calculateSum();
                 void setY(int);
 };
