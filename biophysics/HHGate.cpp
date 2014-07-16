@@ -274,6 +274,7 @@ double HHGate::lookupB( double v ) const
 
 void HHGate::lookupBoth( double v, double* A, double* B ) const
 {
+/*
 	if ( v <= xmin_ ) {
 		*A = A_[0];
 		*B = B_[0];
@@ -293,9 +294,8 @@ void HHGate::lookupBoth( double v, double* A, double* B ) const
 			*B = B_[ index ];
 		}
 	}
-	cout << "$$$$" << *A << " " << *B << endl;
+*/
 	gpu_.lookupTables(v, A, B);
-	cout << "####" << *A << " " << *B << endl;
 }
 
 vector< double > HHGate::getAlpha( const Eref& e) const 
@@ -645,7 +645,7 @@ void HHGate::setupTables( const vector< double >& parms, bool doTau )
 	}
 
 	//Store table data in GPU memory
-	gpu_.setupTables(&A_[0], &B_[0], A_.size(), B_.size(), xmin_, xmax_, invDx_); 
+	gpu_.setupTables(&A_[0], &B_[0], A_.size(), B_.size(), &xmin_, &xmax_, &invDx_); 
 
 }
 
