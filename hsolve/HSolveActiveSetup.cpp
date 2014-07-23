@@ -384,6 +384,9 @@ void HSolveActive::createLookupTables()
     caTable_ = LookupTable( caMin_, caMax_, caDiv_, caGate.size() );
     vTable_ = LookupTable( vMin_, vMax_, vDiv_, vGate.size() );
 
+    gpu_ = GpuLookupTable(&vMin_, &vMax_, &vDiv_, vGate.size());
+    //gpu_.setupTable(&vMin_);
+
     vector< double > A, B;
     vector< double >::iterator ia, ib;
     // double a, b;
@@ -489,6 +492,8 @@ void HSolveActive::createLookupTables()
                 caRow_.push_back( &caRowCompt_[ index ] );
         }
     }
+
+    gpu_.sayHi();
 }
 
 /**

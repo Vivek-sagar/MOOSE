@@ -60,6 +60,8 @@ void GpuInterface::sayHi()
 	cout << "Hello there\n";
 }
 
+//This is the reimplementation of the lookuptable code in biophysics/HHGate
+//Not the one in hsolve
 void GpuInterface::lookupTables(double &v, double *A, double *B) const
 {
 /*
@@ -89,6 +91,8 @@ void GpuInterface::lookupTables(double &v, double *A, double *B) const
 }
 
 
+//This is the reimplementation of the setuptable code in biophysics/HHGate
+//Not the one in hsolve
 void GpuInterface::setupTables(double *A, double *B, double ASize, double BSize, double* xmin, double* xmax, double* invDx)
 {
 	cudaMalloc( (void**)&A_d, ASize*sizeof(double));

@@ -30,7 +30,8 @@ OBJ = \
 	ZombieHHChannel.o \
 
 CUOBJ = \
-	GpuSolver.cu.o 
+	GpuSolver.cu.o \
+	GpuLookup.cu.o \
 
 HEADERS = \
 	../basecode/header.h
@@ -52,6 +53,7 @@ ZombieCompartment.o:	../biophysics/CompartmentBase.h ZombieCompartment.h ../rand
 ZombieCaConc.o:	ZombieCaConc.h ../biophysics/CaConc.h HSolve.h HSolveActive.h RateLookup.h HSolvePassive.h HinesMatrix.h HSolveStruct.h ../basecode/ElementValueFinfo.h
 ZombieHHChannel.o:	ZombieHHChannel.h ../biophysics/HHChannel.h ../biophysics/ChanBase.h ../biophysics/HHGate.h HSolve.h HSolveActive.h RateLookup.h HSolvePassive.h HinesMatrix.h HSolveStruct.h ../basecode/ElementValueFinfo.h
 GpuSolver.cu.o: GpuSolver.h
+GpuLookup.cu.o: GpuLookup.h
 
 .cpp.o:
 	$(CXX) -fPIC  $(CXXFLAGS) $(SMOLDYN_FLAGS) -I. -I../basecode -I../msg -I$(CUDA_INSTALL_PATH)/include $< -c

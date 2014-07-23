@@ -23,6 +23,7 @@
 #include "HinesMatrix.h"
 #include "HSolvePassive.h"
 #include "RateLookup.h"
+#include "GpuLookup.h"
 
 class HSolveActive: public HSolvePassive
 {
@@ -35,6 +36,7 @@ public:
     void step( ProcPtr info );			///< Equivalent to process
     void reinit( ProcPtr info );
 
+    GpuLookupTable gpu_;
 protected:
     /**
      * Solver parameters: exposed as fields in MOOSE
