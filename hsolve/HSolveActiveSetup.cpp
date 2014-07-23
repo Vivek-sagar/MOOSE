@@ -464,7 +464,15 @@ void HSolveActive::createLookupTables()
         vTable_.addColumns( ig, A, B );
         //Appending new column to lookupTable in GPU memory. The contrived &A[0] is just to get a pointer to the A array. CUDA doesnt support std::vectors
         gpu_.addColumns(ig, &A[0], &B[0]);
-        gpu_.lookup();
+
+        double X[200];
+        double Y[200];
+        for (int i=0; i<200; i++)
+        {
+            X[i] = i;
+            Y[i] = 0.0;
+        }
+        gpu_.lookup(X, Y);
     }
 
     column_.reserve( gateId_.size() );

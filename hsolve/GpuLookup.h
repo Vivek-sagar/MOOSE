@@ -5,7 +5,8 @@ class GpuLookupTable
 {
 	public:
 
-		double min_, max_, dx_, *result_;
+		double min_, max_, dx_;
+		double result_[1000]; //Hardcoded value. Check .cu file for the excuse
 		unsigned int nPts_, nColumns_;
 
 		double *min_d, *max_d, *dx_d, *result_d;
@@ -16,7 +17,7 @@ class GpuLookupTable
 		GpuLookupTable(double *min, double *max, int *nDivs, unsigned int nSpecies);
 		void addColumns(int species, double *C1, double *C2);
 		
-		void lookup();
+		void lookup(double *row, double *column);
 
 		void sayHi();
 		
