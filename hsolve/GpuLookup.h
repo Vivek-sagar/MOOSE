@@ -1,6 +1,18 @@
 #ifndef GPU_LOOKUP_H
 #define GPU_LOOKUP_H
 
+struct GpuLookupRow
+{
+	double* row;		///< Pointer to the first column on a row
+	double fraction;	///< Fraction of V or Ca over and above the division
+						///< boundary for interpolation.
+};
+
+struct GpuLookupColumn
+{
+	unsigned int column;
+};
+
 class GpuLookupTable
 {
 	public:
@@ -15,9 +27,10 @@ class GpuLookupTable
 
 		GpuLookupTable();
 		GpuLookupTable(double *min, double *max, int *nDivs, unsigned int nSpecies);
+		// void row(double V, double *row);
 		void addColumns(int species, double *C1, double *C2);
 		
-		void lookup(double *row, double *column);
+		void lookup(double *row, double *column, unsigned int set_size);
 
 		void sayHi();
 		

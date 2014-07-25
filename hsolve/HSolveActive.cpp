@@ -9,6 +9,7 @@
 
 #include "header.h"
 #include <queue>
+#include <iostream>
 #include "HSolveStruct.h"
 #include "HinesMatrix.h"
 #include "HSolvePassive.h"
@@ -255,8 +256,14 @@ void HSolveActive::advanceChannels( double dt )
             if ( ichan->Xpower_ > 0.0 )
             {
                 vTable_.lookup( *icolumn, vRow, C1, C2 );
+                //std::cout << "^^^^" << C1 << " " << C2 << '\n';
+
                 //~ *istate = *istate * C1 + C2;
                 //~ *istate = ( C1 + ( 2 - C2 ) * *istate ) / C2;
+
+                //double *vRowGpu;
+                //gpu_.row(*iv, vRowGpu);
+
                 if ( ichan->instant_ & INSTANT_X )
                     *istate = C1 / C2;
                 else

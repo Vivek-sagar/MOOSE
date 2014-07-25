@@ -462,18 +462,22 @@ void HSolveActive::createLookupTables()
 
         //~ vTable_.addColumns( ig, A, B, interpolate );
         vTable_.addColumns( ig, A, B );
-        //Appending new column to lookupTable in GPU memory. The contrived &A[0] is just to get a pointer to the A array. CUDA doesnt support std::vectors
+        // Appending new column to lookupTable in GPU memory. 
+        // The &A[0] is just to get a pointer to the A array. CUDA doesnt support std::vectors
         gpu_.addColumns(ig, &A[0], &B[0]);
 
-        double X[200];
-        double Y[200];
-        for (int i=0; i<200; i++)
-        {
-            X[i] = i;
-            Y[i] = 0.0;
-        }
-        gpu_.lookup(X, Y);
     }
+
+    // double X[999];
+    // double Y[999];
+    // for (int i=0; i<999; i++)
+    // {
+    //     X[i] = i;
+    //     Y[i] = 1.0;
+    // }
+    double X[] = {0.0, 0.0, 0.0, 0.0};
+    double Y[] = {1.0, 2.0, 3.0, 4.0};
+    gpu_.lookup(X, Y, 4);
 
     column_.reserve( gateId_.size() );
     for ( unsigned int ig = 0; ig < gateId_.size(); ++ig )

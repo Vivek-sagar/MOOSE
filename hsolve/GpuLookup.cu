@@ -2,7 +2,7 @@
 #include <iostream>
 #include "GpuLookup.h"
 
-__global__ void lookup_kernel(double *row_array, double *column_array, double *table_d, unsigned int *nColumns_d, double *result_d)
+__global__ void lookup_kernel(double *row_array, double *column_array, double *table_d, unsigned int *nRows_d, double *result_d)
 {
 
 	int tId = threadIdx.x;
@@ -12,8 +12,8 @@ __global__ void lookup_kernel(double *row_array, double *column_array, double *t
 
 	double *table = table_d;
 
-	table += (int)(row*2 + column); // This formula ignores column considerations. Assumes a single type of gate with 2 columns.
-	// table += (int)(row*(2* *nColumns_d) + column);
+	table += (int)(row + column * (*nRows_d));
+
 	result_d[tId] = *table;
 }
 
@@ -32,7 +32,7 @@ GpuLookupTable::GpuLookupTable(double *min, double *max, int *nDivs, unsigned in
 	nPts_ = *nDivs + 1 + 1;
 	dx_= ( *max - *min ) / *nDivs;
 	// Every row has 2 entries for each type of gate
-	nColumns_ = 2 * nSpecies;
+	nColumns_ = 0;//2 * nSpecies;
 
 	cudaMalloc((void **)&min_d, sizeof(double));
 	cudaMalloc((void **)&max_d, sizeof(double));
@@ -56,43 +56,67 @@ GpuLookupTable::GpuLookupTable(double *min, double *max, int *nDivs, unsigned in
 	cudaMemset(table_d, 0x00, (nPts_ * 100) * sizeof(double));
 }
 
+// void GpuLookupTable::row(double V, GpuLookupRow& row)
+// {
+// 	if (V < min_) V = min_;
+// 	else if (V > max_) V = max_;
+	
+// 	double div = ( x - min_ ) / dx_;
+// 	unsigned int integer = ( unsigned int )( div );
+
+// 	row.fraction = div - integer;
+// 	row.row = table_d + integer * nColumns_;
+// }
+
 void GpuLookupTable::sayHi()
 {
 	std::cout << "Hi there! ";
 }
 
+// Columns are arranged in memory as    |	They are visible as
+// 										|	Column 1 	Column 2 	Column 3 	Column 4
+// C1(Type 1)							|	C1(Type 1) 	C2(Type 1)	C1(Type 2)	C2(Type 2)
+// C2(Type 1)							|
+// C1(Type 2)							|
+// C2(Type 2)							|
+// .									|
+// .									|
+// .									|
+
+
 void GpuLookupTable::addColumns(int species, double *C1, double *C2)
 {
 	//Get iTable to point to last element in the table
-	double *iTable = table_d;//+(nPts_ * nColumns_);
+	double *iTable = table_d + (nPts_ * nColumns_);
+	
 	// Loop until last but one point
-
-	std::cout << "********" << nColumns_ << "\n" ;
 	for (int i=0; i<nPts_-1; i++ )
 	{
 		//std::cout << i << " " << C1[i] << " " << C2[i] << "\n";
 		cudaMemcpy(iTable, &C1[i], sizeof(double), cudaMemcpyHostToDevice);
 		iTable++;
-		cudaMemcpy(iTable, &C2[i], sizeof(double), cudaMemcpyHostToDevice);
-		iTable++;
+		
 	}
-
-	//std::cout << "ggggg" << C2[0] << " " << C2[40] << "\n";
-
 	// Then duplicate the last point
 	cudaMemcpy(iTable, &C1[nPts_-2], sizeof(double), cudaMemcpyHostToDevice);
 	iTable++;
+
+	//Similarly for C2
+	for (int i=0; i<nPts_-1; i++ )
+	{
+		cudaMemcpy(iTable, &C2[i], sizeof(double), cudaMemcpyHostToDevice);
+		iTable++;
+	}
 	cudaMemcpy(iTable, &C2[nPts_-2], sizeof(double), cudaMemcpyHostToDevice);
 	iTable++;
+
+	nColumns_ += 2;
 }
 
-void GpuLookupTable::lookup(double *row, double *column)
+void GpuLookupTable::lookup(double *row, double *column, unsigned int set_size)
 {
-	 //std::cout << "%%%%%%%%" << row[0] << " " << column[0] << " " << row[1] << " " << column[1] << "\n";
 	double *row_array_d;
 	double *column_array_d;
-
-	int set_size = 200;
 
 	cudaMalloc((void **)&row_array_d, set_size*sizeof(double));
 	cudaMalloc((void **)&column_array_d, set_size*sizeof(double));
@@ -100,13 +124,13 @@ void GpuLookupTable::lookup(double *row, double *column)
 	cudaMemcpy(row_array_d, row, set_size*sizeof(double), cudaMemcpyHostToDevice);
 	cudaMemcpy(column_array_d, column, set_size*sizeof(double), cudaMemcpyHostToDevice);
 
-	lookup_kernel<<<1,set_size>>>(row_array_d, column_array_d, table_d, nColumns_d, result_d);
+	lookup_kernel<<<1,set_size>>>(row_array_d, column_array_d, table_d, nPts_d, result_d);
 	
 	cudaMemcpy(result_, result_d, set_size*sizeof(double), cudaMemcpyDeviceToHost);
 
 	std::cout << "%%%%%%%% "; 
 	for (int i=0; i<set_size; i++)
-		std::cout << result_[i] << " ";
+		std::cout << result_[i] << "\n";
 	std::cout << "\n";
 
 }
