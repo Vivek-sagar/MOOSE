@@ -10,6 +10,7 @@
 #include "header.h"
 #include <queue>
 #include <iostream>
+#include <numeric>
 #include "HSolveStruct.h"
 #include "HinesMatrix.h"
 #include "HSolvePassive.h"
@@ -246,7 +247,14 @@ void HSolveActive::advanceChannels( double dt )
 
     double *rows;
     rows = (double *)malloc(V_.size()*sizeof(double));
-
+    
+    // init lazy lookup arrays - can be local variable? TODO
+    // we can also use unique_ptr TODO
+    int nchan = std::accumulate(channelCount_.begin(), channelCount_.end(), 0);
+    double *lazyLookup_iva = new double[nchan];
+    double *lazyLookup_cols = new double[nchan];
+    double *lazyLookup_istate = new double[nchan];
+    
     for ( iv = V_.begin(); iv != V_.end(); ++iv )
     {
         vTable_.row( *iv, vRow );
@@ -271,6 +279,7 @@ void HSolveActive::advanceChannels( double dt )
          */
          int index = 0;
         chanBoundary = ichan + *ichannelcount;
+        
         for ( ; ichan < chanBoundary; ++ichan )
         {
             if ( ichan->Xpower_ > 0.0 )
@@ -366,6 +375,11 @@ void HSolveActive::advanceChannels( double dt )
 
         ++ichannelcount, ++icacount;
     }
+    
+    // free lazy lookup
+    delete [] lazyLookup_iva;
+    delete [] lazyLookup_cols;
+    delete [] lazyLookup_istate;
 }
 
 /**
