@@ -8,6 +8,7 @@
 **********************************************************************/
 
 #include <vector>
+#include <iostream>
 using namespace std;
 
 #include "RateLookup.h"

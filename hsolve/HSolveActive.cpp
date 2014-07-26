@@ -33,6 +33,7 @@ const int HSolveActive::INSTANT_Z = 4;
 HSolveActive::HSolveActive()
 {
     caAdvance_ = 1;
+    lazyLookup_index = 0;
 
     // Default lookup table size
     //~ vDiv_ = 3000;    // for voltage
@@ -51,8 +52,20 @@ void HSolveActive::step( ProcPtr info )
     {
         current_.resize( channel_.size() );
     }
-
     advanceChannels( info->dt );
+
+    std::cout << "LazyLookup Index : " << lazyLookup_index << "\n";
+
+    double *rows;
+    rows = (double *)malloc(lazyLookup_index*sizeof(double));
+
+    if (lazyLookup_index > 200)
+    {
+        gpu_.findRow( &lazyLookup_iva[0], &rows[0], lazyLookup_index);
+        gpu_.lookup(&rows[0], &lazyLookup_cols[0], lazyLookup_index);
+        lazyLookup_index = 0;
+    }
+
     calculateChannelCurrents();
     updateMatrix();
     HSolvePassive::forwardEliminate();
@@ -231,11 +244,18 @@ void HSolveActive::advanceChannels( double dt )
 
     LookupRow vRow;
     double C1, C2;
+
+    double *rows;
+    rows = (double *)malloc(V_.size()*sizeof(double));
+
     for ( iv = V_.begin(); iv != V_.end(); ++iv )
     {
         vTable_.row( *iv, vRow );
         icarowcompt = caRowCompt_.begin();
         caBoundary = ica + *icacount;
+
+        //@ GpuColumn_ contains all the column information. Basically just a copy of column_ without the lookupcolumn class
+
         for ( ; ica < caBoundary; ++ica )
         {
             caTable_.row( *ica, *icarowcompt );
@@ -250,19 +270,37 @@ void HSolveActive::advanceChannels( double dt )
          *
          * Will be nice to test these optimizations.
          */
+         int index = 0;
         chanBoundary = ichan + *ichannelcount;
         for ( ; ichan < chanBoundary; ++ichan )
         {
             if ( ichan->Xpower_ > 0.0 )
             {
+                std::cout << "\nReached loop\n"; 
                 vTable_.lookup( *icolumn, vRow, C1, C2 );
-                //std::cout << "^^^^" << C1 << " " << C2 << '\n';
+                std::cout << "Normal lookup gives : " << C1 << " " << C2 << "\n";
+
+                // std::cout << "Gpu Column : " << GpuColumn_[index] << "\n"; 
 
                 //~ *istate = *istate * C1 + C2;
                 //~ *istate = ( C1 + ( 2 - C2 ) * *istate ) / C2;
 
-                //double *vRowGpu;
-                //gpu_.row(*iv, vRowGpu);
+                double cols[2];
+                cols[0] = GpuColumn_[index];
+                cols[1] = GpuColumn_[index]+1;
+
+                double iva[2];
+                iva[0] = iv[0];
+                iva[1] = iv[0];
+
+                gpu_.findRow(&iva[0], rows, 2);
+                gpu_.lookup(&rows[0], &cols[0], 2);
+
+                lazyLookup_cols[lazyLookup_index] = GpuColumn_[index];
+                lazyLookup_cols[lazyLookup_index+1] = GpuColumn_[index]+1;
+                lazyLookup_iva[lazyLookup_index] = iv[0];
+                lazyLookup_iva[lazyLookup_index+1] = iv[0];
+                lazyLookup_index += 2;
 
                 if ( ichan->instant_ & INSTANT_X )
                     *istate = C1 / C2;
@@ -273,6 +311,7 @@ void HSolveActive::advanceChannels( double dt )
                 }
 
                 ++icolumn, ++istate;
+                ++index;
             }
 
             if ( ichan->Ypower_ > 0.0 )
@@ -289,6 +328,7 @@ void HSolveActive::advanceChannels( double dt )
                 }
 
                 ++icolumn, ++istate;
+                ++index;
             }
 
             if ( ichan->Zpower_ > 0.0 )
@@ -314,6 +354,7 @@ void HSolveActive::advanceChannels( double dt )
                 }
 
                 ++icolumn, ++istate, ++icarow;
+                ++index;
             }
         }
 

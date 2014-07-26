@@ -67,6 +67,10 @@ protected:
     double                    caMax_;
     int                       caDiv_;
 
+    int lazyLookup_index;
+    double lazyLookup_iva[1000];
+    double lazyLookup_cols[1000];
+
     /**
      * Internal data structures. Will also be accessed in derived class HSolve.
      */
@@ -92,6 +96,8 @@ protected:
     ///< each compartment
     vector< int >             caDependIndex_;	///< Which pool does each Ca
     ///< depdt channel depend upon?
+    vector< double >          GpuColumn_;
+
     vector< LookupColumn >    column_;			///< Which column in the table
     ///< to lookup for this species
     vector< LookupRow >       caRowCompt_;      /**< Lookup row buffer.

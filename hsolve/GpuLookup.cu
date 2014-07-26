@@ -7,14 +7,18 @@ __global__ void lookup_kernel(double *row_array, double *column_array, double *t
 
 	int tId = threadIdx.x;
 
-	double row = row_array[tId];
+	int row = row_array[tId];
+	double fraction = row_array[tId]-row;
+
 	double column = column_array[tId];
 
 	double *table = table_d;
 
 	table += (int)(row + column * (*nRows_d));
 
-	result_d[tId] = *table;
+	double a = *table;
+	double b = *(table+1);
+	result_d[tId] = a+(b-a)*fraction;
 }
 
 
@@ -62,11 +66,22 @@ GpuLookupTable::GpuLookupTable(double *min, double *max, int *nDivs, unsigned in
 // 	else if (V > max_) V = max_;
 	
 // 	double div = ( x - min_ ) / dx_;
-// 	unsigned int integer = ( unsigned int )( div );
-
-// 	row.fraction = div - integer;
-// 	row.row = table_d + integer * nColumns_;
 // }
+
+void GpuLookupTable::findRow(double *V, double *rows, int size)
+{
+	 for (int i=0; i<size; i++)
+	{
+		double x = V[i];
+
+		if ( x < min_ )
+			x = min_;
+		else if ( x > max_ )
+			x = max_;
+	 	rows[i] = ( x - min_ ) / dx_;
+	// 	//std::cout << "&&&&" << rows[i] << "\n";
+	}
+}
 
 void GpuLookupTable::sayHi()
 {
@@ -74,9 +89,10 @@ void GpuLookupTable::sayHi()
 }
 
 // Columns are arranged in memory as    |	They are visible as
-// 										|	Column 1 	Column 2 	Column 3 	Column 4
+// 										|	
+//										|	Column 1 	Column 2 	Column 3 	Column 4
 // C1(Type 1)							|	C1(Type 1) 	C2(Type 1)	C1(Type 2)	C2(Type 2)
-// C2(Type 1)							|
+// C2(Type 1)							|	
 // C1(Type 2)							|
 // C2(Type 2)							|
 // .									|
@@ -118,6 +134,12 @@ void GpuLookupTable::lookup(double *row, double *column, unsigned int set_size)
 	double *row_array_d;
 	double *column_array_d;
 
+	// for (int i=0; i<set_size; i++)
+	// {
+	// 	row[i] = (double)(int)row[i];		//Taking only the integer part
+	// 	std::cout << "Gpu Lookup on : " << row[i] << ":" << column[i]<< "\n";
+	// }
+
 	cudaMalloc((void **)&row_array_d, set_size*sizeof(double));
 	cudaMalloc((void **)&column_array_d, set_size*sizeof(double));
 
@@ -128,9 +150,9 @@ void GpuLookupTable::lookup(double *row, double *column, unsigned int set_size)
 	
 	cudaMemcpy(result_, result_d, set_size*sizeof(double), cudaMemcpyDeviceToHost);
 
-	std::cout << "%%%%%%%% "; 
+	std::cout << "Gpu Lookup result :  "; 
 	for (int i=0; i<set_size; i++)
-		std::cout << result_[i] << "\n";
+		std::cout << result_[i] << " ";
 	std::cout << "\n";
 
 }

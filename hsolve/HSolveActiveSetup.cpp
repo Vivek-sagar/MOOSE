@@ -480,6 +480,8 @@ void HSolveActive::createLookupTables()
     gpu_.lookup(X, Y, 4);
 
     column_.reserve( gateId_.size() );
+    GpuColumn_.reserve( gateId_.size() );
+
     for ( unsigned int ig = 0; ig < gateId_.size(); ++ig )
     {
         unsigned int species = gateSpecies[ gateId_[ ig ] ];
@@ -491,6 +493,8 @@ void HSolveActive::createLookupTables()
             vTable_.column( species, column );
 
         column_.push_back( column );
+
+        GpuColumn_.push_back(2*species);
     }
 
     ///////////////////!!!!!!!!!!

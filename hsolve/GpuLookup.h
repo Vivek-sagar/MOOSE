@@ -29,6 +29,8 @@ class GpuLookupTable
 		GpuLookupTable(double *min, double *max, int *nDivs, unsigned int nSpecies);
 		// void row(double V, double *row);
 		void addColumns(int species, double *C1, double *C2);
+
+		void findRow(double *V, double *rows, int size);
 		
 		void lookup(double *row, double *column, unsigned int set_size);
 
