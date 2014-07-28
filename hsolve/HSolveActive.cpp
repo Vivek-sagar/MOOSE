@@ -35,6 +35,9 @@ HSolveActive::HSolveActive()
 {
     caAdvance_ = 1;
     lazyLookup_index = 0;
+    lazyLookup_iva = 0;
+    lazyLookup_cols = 0;
+    lazyLookup_istate = 0;
 
     // Default lookup table size
     //~ vDiv_ = 3000;    // for voltage
@@ -248,12 +251,17 @@ void HSolveActive::advanceChannels( double dt )
     double *rows;
     rows = (double *)malloc(V_.size()*sizeof(double));
     
-    // init lazy lookup arrays - can be local variable? TODO
-    // we can also use unique_ptr TODO
+    // lazy lookup de(allocation)
+    if (lazyLookup_iva != 0)
+    {
+        delete [] lazyLookup_iva;
+        delete [] lazyLookup_cols;
+        delete [] lazyLookup_istate;
+    }
     int nchan = std::accumulate(channelCount_.begin(), channelCount_.end(), 0);
-    double *lazyLookup_iva = new double[nchan];
-    double *lazyLookup_cols = new double[nchan];
-    double *lazyLookup_istate = new double[nchan];
+    lazyLookup_iva = new double[nchan];
+    lazyLookup_cols = new double[nchan];
+    lazyLookup_istate = new double[nchan];
     
     for ( iv = V_.begin(); iv != V_.end(); ++iv )
     {
@@ -375,11 +383,7 @@ void HSolveActive::advanceChannels( double dt )
 
         ++ichannelcount, ++icacount;
     }
-    
-    // free lazy lookup
-    delete [] lazyLookup_iva;
-    delete [] lazyLookup_cols;
-    delete [] lazyLookup_istate;
+
 }
 
 /**
