@@ -54,17 +54,14 @@ void HSolveActive::step( ProcPtr info )
     }
     advanceChannels( info->dt );
 
-    std::cout << "LazyLookup Index : " << lazyLookup_index << "\n";
+    // std::cout << "LazyLookup Index : " << lazyLookup_index << "\n";
 
     double *rows;
     rows = (double *)malloc(lazyLookup_index*sizeof(double));
 
-    if (lazyLookup_index > 200)
-    {
-        gpu_.findRow( &lazyLookup_iva[0], &rows[0], lazyLookup_index);
-        gpu_.lookup(&rows[0], &lazyLookup_cols[0], lazyLookup_index);
-        lazyLookup_index = 0;
-    }
+    // gpu_.findRow( &lazyLookup_iva[0], &rows[0], lazyLookup_index);
+    // gpu_.lookup(&rows[0], &lazyLookup_cols[0], &lazyLookup_istate[0], lazyLookup_dt, lazyLookup_index);
+    lazyLookup_index = 0;
 
     calculateChannelCurrents();
     updateMatrix();
@@ -242,6 +239,8 @@ void HSolveActive::advanceChannels( double dt )
     vector< LookupRow >::iterator icarowcompt;
     vector< LookupRow* >::iterator icarow = caRow_.begin();
 
+    lazyLookup_dt = dt;
+
     LookupRow vRow;
     double C1, C2;
 
@@ -280,8 +279,6 @@ void HSolveActive::advanceChannels( double dt )
                 vTable_.lookup( *icolumn, vRow, C1, C2 );
                 std::cout << "Normal lookup gives : " << C1 << " " << C2 << "\n";
 
-                // std::cout << "Gpu Column : " << GpuColumn_[index] << "\n"; 
-
                 //~ *istate = *istate * C1 + C2;
                 //~ *istate = ( C1 + ( 2 - C2 ) * *istate ) / C2;
 
@@ -293,13 +290,20 @@ void HSolveActive::advanceChannels( double dt )
                 iva[0] = iv[0];
                 iva[1] = iv[0];
 
+                double istates[2];
+                istates[0] = *istate;
+                istates[1] = *istate;
+
                 gpu_.findRow(&iva[0], rows, 2);
-                gpu_.lookup(&rows[0], &cols[0], 2);
+                gpu_.lookup(&rows[0], &cols[0], &istates[0], dt, 2);
 
                 lazyLookup_cols[lazyLookup_index] = GpuColumn_[index];
                 lazyLookup_cols[lazyLookup_index+1] = GpuColumn_[index]+1;
                 lazyLookup_iva[lazyLookup_index] = iv[0];
                 lazyLookup_iva[lazyLookup_index+1] = iv[0];
+                lazyLookup_istate[lazyLookup_index] = *istate;
+                lazyLookup_istate[lazyLookup_index+1] = *istate;
+
                 lazyLookup_index += 2;
 
                 if ( ichan->instant_ & INSTANT_X )
@@ -309,6 +313,8 @@ void HSolveActive::advanceChannels( double dt )
                     double temp = 1.0 + dt / 2.0 * C2;
                     *istate = ( *istate * ( 2.0 - temp ) + dt * C1 ) / temp;
                 }
+
+                std::cout << "Normally updated state is : " << *istate << "\n";
 
                 ++icolumn, ++istate;
                 ++index;

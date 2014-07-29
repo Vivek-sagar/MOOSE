@@ -475,9 +475,9 @@ void HSolveActive::createLookupTables()
     //     X[i] = i;
     //     Y[i] = 1.0;
     // }
-    double X[] = {0.0, 0.0, 0.0, 0.0};
-    double Y[] = {1.0, 2.0, 3.0, 4.0};
-    gpu_.lookup(X, Y, 4);
+    // double X[] = {0.0, 0.0, 0.0, 0.0};
+    // double Y[] = {1.0, 2.0, 3.0, 4.0};
+    // gpu_.lookup(X, Y, 4);
 
     column_.reserve( gateId_.size() );
     GpuColumn_.reserve( gateId_.size() );

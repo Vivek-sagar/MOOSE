@@ -1,0 +1,798 @@
+2014-07-29 21:22:14,193 DEBUG traub2005 channelbase.py get_class_field: NaF: Xpower=3
+2014-07-29 21:22:14,193 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaF[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,193 DEBUG traub2005 channelbase.py get_class_field: NaF: Ypower=1
+2014-07-29 21:22:14,194 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaF[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,194 DEBUG traub2005 channelbase.py get_class_field: NaF: X=0.0
+2014-07-29 21:22:14,194 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/NaF[0] of class NaF
+2014-07-29 21:22:14,196 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaF_TCR[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,196 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaF_TCR[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,196 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/NaF_TCR[0] of class NaF_TCR
+2014-07-29 21:22:14,197 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaF2[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,198 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaF2[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,198 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/NaF2[0] of class NaF2
+2014-07-29 21:22:14,199 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaF2_nRT[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,199 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaF2_nRT[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,199 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/NaF2_nRT[0] of class NaF2_nRT
+2014-07-29 21:22:14,200 DEBUG traub2005 channelbase.py get_class_field: NaP: Xpower=1.0
+2014-07-29 21:22:14,201 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaP[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,201 DEBUG traub2005 channelbase.py get_class_field: NaP: Ypower=0.0
+2014-07-29 21:22:14,201 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/NaP[0] of class NaP
+2014-07-29 21:22:14,201 DEBUG traub2005 channelbase.py get_class_field: NaPF: Xpower=3
+2014-07-29 21:22:14,202 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaPF[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,202 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/NaPF[0] of class NaPF
+2014-07-29 21:22:14,203 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaPF_SS[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,203 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/NaPF_SS[0] of class NaPF_SS
+2014-07-29 21:22:14,204 DEBUG traub2005 channelbase.py get_class_field: NaPF_TCR: Xpower=1
+2014-07-29 21:22:14,204 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/NaPF_TCR[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,204 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/NaPF_TCR[0] of class NaPF_TCR
+2014-07-29 21:22:14,206 DEBUG traub2005 channelbase.py get_class_field: KDR: Xpower=4
+2014-07-29 21:22:14,207 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KDR[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,207 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KDR[0] of class KDR
+2014-07-29 21:22:14,208 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KDR_FS[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,208 DEBUG traub2005 channelbase.py get_class_field: KDR_FS: Ek=-0.1
+2014-07-29 21:22:14,208 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KDR_FS[0] of class KDR_FS
+2014-07-29 21:22:14,209 DEBUG traub2005 channelbase.py get_class_field: KA: Xpower=4
+2014-07-29 21:22:14,210 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KA[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,210 DEBUG traub2005 channelbase.py get_class_field: KA: Ypower=1
+2014-07-29 21:22:14,210 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KA[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,211 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KA[0] of class KA
+2014-07-29 21:22:14,211 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KA_IB[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,211 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KA_IB[0]/gateX[0]: Gate setup in baseclass: ChannelMeta
+2014-07-29 21:22:14,212 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KA_IB[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,212 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KA_IB[0] of class KA_IB
+2014-07-29 21:22:14,213 DEBUG traub2005 channelbase.py get_class_field: K2: Xpower=1
+2014-07-29 21:22:14,213 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/K2[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,214 DEBUG traub2005 channelbase.py get_class_field: K2: Ypower=1
+2014-07-29 21:22:14,214 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/K2[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,214 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/K2[0] of class K2
+2014-07-29 21:22:14,214 DEBUG traub2005 channelbase.py get_class_field: KM: Xpower=1
+2014-07-29 21:22:14,214 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KM[0]/gateX[0]: Using alpha/beta tables
+2014-07-29 21:22:14,215 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KM[0] of class KM
+2014-07-29 21:22:14,215 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KAHP[0]/gateZ[0]: Using alpha/beta tables
+2014-07-29 21:22:14,215 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KAHP[0] of class KAHP
+2014-07-29 21:22:14,216 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KAHP_SLOWER[0]/gateZ[0]: Using alpha/beta tables
+2014-07-29 21:22:14,216 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KAHP_SLOWER[0] of class KAHP_SLOWER
+2014-07-29 21:22:14,216 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KAHP_DP[0]/gateZ[0]: Using alpha/beta tables
+2014-07-29 21:22:14,216 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KAHP_DP[0] of class KAHP_DP
+2014-07-29 21:22:14,217 DEBUG traub2005 channelbase.py get_class_field: KC: Xpower=1
+2014-07-29 21:22:14,217 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KC[0]/gateX[0]: Using A/B tables
+2014-07-29 21:22:14,217 DEBUG traub2005 channelbase.py get_class_field: KC: Zpower=1
+2014-07-29 21:22:14,218 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KC[0]/gateZ[0]: Using A/B tables
+2014-07-29 21:22:14,218 DEBUG traub2005 channelbase.py get_class_field: KC: instant=4
+2014-07-29 21:22:14,218 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KC[0] of class KC
+2014-07-29 21:22:14,219 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KC_FAST[0]/gateX[0]: Using A/B tables
+2014-07-29 21:22:14,219 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KC_FAST[0]/gateZ[0]: Using A/B tables
+2014-07-29 21:22:14,219 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/KC_FAST[0]/gateZ[0]: Gate setup in baseclass: ChannelMeta
+2014-07-29 21:22:14,220 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/KC_FAST[0] of class KC_FAST
+2014-07-29 21:22:14,222 DEBUG traub2005 channelbase.py get_class_field: AR: Xpower=1
+2014-07-29 21:22:14,222 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/AR[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,222 DEBUG traub2005 channelbase.py get_class_field: AR: Ek=-0.035
+2014-07-29 21:22:14,222 DEBUG traub2005 channelbase.py get_class_field: AR: X=0.25
+2014-07-29 21:22:14,223 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/AR[0] of class AR
+2014-07-29 21:22:14,225 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/CaL[0]/gateX[0]: Using alpha/beta tables
+2014-07-29 21:22:14,225 DEBUG traub2005 channelbase.py get_class_field: CaL: mstring=('addmsg1', '.\tIkOut\t../CaPool\tcurrent')
+2014-07-29 21:22:14,226 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/CaL[0] of class CaL
+2014-07-29 21:22:14,226 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/CaT[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,226 DEBUG traub2005 channelbase.py get_class_field: CaT: Ypower=1
+2014-07-29 21:22:14,227 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/CaT[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,227 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/CaT[0] of class CaT
+2014-07-29 21:22:14,227 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/CaT_A[0]/gateX[0]: Using tau/inf tables
+2014-07-29 21:22:14,227 DEBUG traub2005 channelbase.py setup_gate_tables: /library[0]/CaT_A[0]/gateY[0]: Using tau/inf tables
+2014-07-29 21:22:14,227 INFO traub2005 channelbase.py __new__: Created prototype: /library[0]/CaT_A[0] of class CaT_A
+2014-07-29 21:22:14,231 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/SupPyrRS.p
+2014-07-29 21:22:14,231 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,231 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,231 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,231 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.095
+2014-07-29 21:22:14,231 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,231 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,231 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,231 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,231 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,231 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.095
+2014-07-29 21:22:14,231 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,231 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.095
+2014-07-29 21:22:14,231 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,231 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.035
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.095
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.095
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.095
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,232 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,232 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,233 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,233 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.095
+2014-07-29 21:22:14,233 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,233 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.095
+2014-07-29 21:22:14,233 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,233 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.095
+2014-07-29 21:22:14,233 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,233 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.095
+2014-07-29 21:22:14,233 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,233 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,233 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,233 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,233 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,233 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.095
+2014-07-29 21:22:14,248 DEBUG traub2005 cells.py read_prototype: Read SupPyrRS with 74 compartments
+2014-07-29 21:22:14,248 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/SupPyrFRB.p
+2014-07-29 21:22:14,248 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,248 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,248 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,248 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.095
+2014-07-29 21:22:14,248 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,248 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,248 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,248 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,248 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,249 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.095
+2014-07-29 21:22:14,249 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,249 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.095
+2014-07-29 21:22:14,249 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,249 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,249 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,249 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.035
+2014-07-29 21:22:14,249 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,249 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,249 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,249 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,249 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,249 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,249 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.095
+2014-07-29 21:22:14,249 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,250 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.095
+2014-07-29 21:22:14,250 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,250 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.095
+2014-07-29 21:22:14,250 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,250 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,250 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,250 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,250 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,250 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,250 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,250 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.095
+2014-07-29 21:22:14,250 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,250 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.095
+2014-07-29 21:22:14,250 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,250 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.095
+2014-07-29 21:22:14,250 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,251 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.095
+2014-07-29 21:22:14,251 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,251 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,251 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,251 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,251 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,251 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.095
+2014-07-29 21:22:14,266 DEBUG traub2005 cells.py read_prototype: Read SupPyrFRB with 74 compartments
+2014-07-29 21:22:14,266 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/SupLTS.p
+2014-07-29 21:22:14,266 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,266 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,266 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,266 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.1
+2014-07-29 21:22:14,266 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,266 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,266 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,267 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,267 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,267 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.1
+2014-07-29 21:22:14,267 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,267 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.1
+2014-07-29 21:22:14,267 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,267 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,267 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,267 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.04
+2014-07-29 21:22:14,267 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,267 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,267 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,267 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,267 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,267 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,268 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.1
+2014-07-29 21:22:14,268 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,268 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.1
+2014-07-29 21:22:14,268 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,268 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.1
+2014-07-29 21:22:14,268 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,268 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,268 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,268 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,268 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,268 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,268 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,268 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.1
+2014-07-29 21:22:14,268 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,268 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.1
+2014-07-29 21:22:14,268 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,269 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.1
+2014-07-29 21:22:14,269 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,269 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.1
+2014-07-29 21:22:14,269 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,269 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,269 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,269 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,269 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,269 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.1
+2014-07-29 21:22:14,279 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/SupLTS.depths
+2014-07-29 21:22:14,280 DEBUG traub2005 cells.py read_prototype: Read SupLTS with 59 compartments
+2014-07-29 21:22:14,280 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/SupAxoaxonic.p
+2014-07-29 21:22:14,280 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,280 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,280 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,280 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.1
+2014-07-29 21:22:14,280 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,280 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,280 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,280 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,280 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,281 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.1
+2014-07-29 21:22:14,281 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,281 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.1
+2014-07-29 21:22:14,281 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,281 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,281 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,281 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.04
+2014-07-29 21:22:14,281 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,281 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,281 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,281 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,281 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,281 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,281 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.1
+2014-07-29 21:22:14,281 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,282 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.1
+2014-07-29 21:22:14,282 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,282 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.1
+2014-07-29 21:22:14,282 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,282 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,282 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,282 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,282 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,282 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,282 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,282 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.1
+2014-07-29 21:22:14,282 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,282 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.1
+2014-07-29 21:22:14,282 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,282 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.1
+2014-07-29 21:22:14,283 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,283 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.1
+2014-07-29 21:22:14,283 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,283 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,283 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,283 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,283 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,283 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.1
+2014-07-29 21:22:14,291 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/SupAxoaxonic.depths
+2014-07-29 21:22:14,291 DEBUG traub2005 cells.py read_prototype: Read SupAxoaxonic with 59 compartments
+2014-07-29 21:22:14,291 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/SupBasket.p
+2014-07-29 21:22:14,291 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,291 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,291 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,292 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.1
+2014-07-29 21:22:14,292 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,292 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,292 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,292 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,292 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,292 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.1
+2014-07-29 21:22:14,292 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,292 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.1
+2014-07-29 21:22:14,292 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,292 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,292 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,292 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.04
+2014-07-29 21:22:14,292 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,292 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,293 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,293 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,293 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,293 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,293 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.1
+2014-07-29 21:22:14,293 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,293 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.1
+2014-07-29 21:22:14,293 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,293 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.1
+2014-07-29 21:22:14,293 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,293 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,293 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,293 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,293 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,293 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,294 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,294 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.1
+2014-07-29 21:22:14,294 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,294 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.1
+2014-07-29 21:22:14,294 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,294 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.1
+2014-07-29 21:22:14,294 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,294 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.1
+2014-07-29 21:22:14,294 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,294 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,294 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,294 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,294 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,294 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.1
+2014-07-29 21:22:14,302 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/SupBasket.depths
+2014-07-29 21:22:14,302 DEBUG traub2005 cells.py read_prototype: Read SupBasket with 59 compartments
+2014-07-29 21:22:14,302 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/SpinyStellate.p
+2014-07-29 21:22:14,302 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,302 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,303 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,303 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.1
+2014-07-29 21:22:14,303 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,303 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,303 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,303 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,303 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,303 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.1
+2014-07-29 21:22:14,303 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,303 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.1
+2014-07-29 21:22:14,303 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,303 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,303 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,303 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.04
+2014-07-29 21:22:14,303 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,304 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,304 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,304 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,304 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,304 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,304 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.1
+2014-07-29 21:22:14,304 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,304 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.1
+2014-07-29 21:22:14,304 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,304 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.1
+2014-07-29 21:22:14,304 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,304 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,304 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,304 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,304 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,305 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,305 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,305 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.1
+2014-07-29 21:22:14,305 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,305 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.1
+2014-07-29 21:22:14,305 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,305 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.1
+2014-07-29 21:22:14,305 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,305 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.1
+2014-07-29 21:22:14,305 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,305 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,305 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,305 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,305 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,305 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.1
+2014-07-29 21:22:14,316 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/SpinyStellate.depths
+2014-07-29 21:22:14,316 DEBUG traub2005 cells.py read_prototype: Read SpinyStellate with 59 compartments
+2014-07-29 21:22:14,316 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/NontuftedRS.p
+2014-07-29 21:22:14,317 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,317 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,317 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,317 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.095
+2014-07-29 21:22:14,317 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,317 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,317 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,317 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,317 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,317 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.095
+2014-07-29 21:22:14,317 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,317 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.095
+2014-07-29 21:22:14,317 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,317 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,317 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,318 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.035
+2014-07-29 21:22:14,318 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,318 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,318 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,318 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,318 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,318 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,318 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.095
+2014-07-29 21:22:14,318 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,318 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.095
+2014-07-29 21:22:14,318 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,318 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.095
+2014-07-29 21:22:14,318 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,318 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,318 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,319 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,319 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,319 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,319 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,319 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.095
+2014-07-29 21:22:14,319 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,319 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.095
+2014-07-29 21:22:14,319 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,319 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.095
+2014-07-29 21:22:14,319 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,319 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.095
+2014-07-29 21:22:14,319 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,319 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,319 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,319 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,320 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,320 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.095
+2014-07-29 21:22:14,329 DEBUG traub2005 cells.py read_prototype: Read NontuftedRS with 50 compartments
+2014-07-29 21:22:14,329 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/TuftedIB.p
+2014-07-29 21:22:14,329 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,329 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,329 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,329 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.095
+2014-07-29 21:22:14,329 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,330 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,330 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,330 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,330 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,330 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.095
+2014-07-29 21:22:14,330 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,330 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.095
+2014-07-29 21:22:14,330 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,330 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,330 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,330 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.035
+2014-07-29 21:22:14,330 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,330 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,330 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,330 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,331 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,331 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,331 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.095
+2014-07-29 21:22:14,331 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,331 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.095
+2014-07-29 21:22:14,331 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,331 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.095
+2014-07-29 21:22:14,331 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,331 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,331 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,331 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,331 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,331 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,331 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,331 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.095
+2014-07-29 21:22:14,332 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,332 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.095
+2014-07-29 21:22:14,332 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,332 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.095
+2014-07-29 21:22:14,332 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,332 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.095
+2014-07-29 21:22:14,332 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,332 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,332 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,332 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,332 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,332 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.095
+2014-07-29 21:22:14,344 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/TuftedIB.depths
+2014-07-29 21:22:14,344 DEBUG traub2005 cells.py read_prototype: Read TuftedIB with 61 compartments
+2014-07-29 21:22:14,344 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/TuftedRS.p
+2014-07-29 21:22:14,344 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,344 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,344 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,344 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.095
+2014-07-29 21:22:14,344 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,345 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,345 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,345 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,345 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,345 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.095
+2014-07-29 21:22:14,345 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,345 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.095
+2014-07-29 21:22:14,345 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,345 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,345 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,345 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.035
+2014-07-29 21:22:14,345 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,345 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,345 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.095
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.095
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.095
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.095
+2014-07-29 21:22:14,346 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,346 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.095
+2014-07-29 21:22:14,347 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,347 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.095
+2014-07-29 21:22:14,347 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,347 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.095
+2014-07-29 21:22:14,347 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,347 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,347 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,347 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,347 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,347 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.095
+2014-07-29 21:22:14,357 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/TuftedRS.depths
+2014-07-29 21:22:14,357 DEBUG traub2005 cells.py read_prototype: Read TuftedRS with 61 compartments
+2014-07-29 21:22:14,357 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/DeepLTS.p
+2014-07-29 21:22:14,357 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,357 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,358 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.1
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,358 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,358 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,358 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.1
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,358 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.1
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,358 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,358 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.04
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,358 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.1
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.1
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.1
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.1
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,359 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.1
+2014-07-29 21:22:14,359 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,360 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.1
+2014-07-29 21:22:14,360 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,360 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.1
+2014-07-29 21:22:14,360 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,360 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,360 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,360 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,360 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,360 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.1
+2014-07-29 21:22:14,369 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/DeepLTS.depths
+2014-07-29 21:22:14,369 DEBUG traub2005 cells.py read_prototype: Read DeepLTS with 59 compartments
+2014-07-29 21:22:14,369 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/DeepAxoaxonic.p
+2014-07-29 21:22:14,369 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,369 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,369 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,369 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.1
+2014-07-29 21:22:14,369 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,369 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,369 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,369 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,370 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.1
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,370 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.1
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,370 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,370 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.04
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,370 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,370 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,370 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.1
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,370 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.1
+2014-07-29 21:22:14,370 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.1
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.1
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.1
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.1
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.1
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,371 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,371 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,372 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,372 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.1
+2014-07-29 21:22:14,378 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/DeepAxoaxonic.depths
+2014-07-29 21:22:14,379 DEBUG traub2005 cells.py read_prototype: Read DeepAxoaxonic with 59 compartments
+2014-07-29 21:22:14,379 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/DeepBasket.p
+2014-07-29 21:22:14,379 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,379 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,379 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,379 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.1
+2014-07-29 21:22:14,379 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,379 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,379 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,379 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,379 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,379 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.1
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.1
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.04
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.1
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.1
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.1
+2014-07-29 21:22:14,380 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,380 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.1
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.1
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.1
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.1
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,381 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,381 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.1
+2014-07-29 21:22:14,388 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/DeepBasket.depths
+2014-07-29 21:22:14,388 DEBUG traub2005 cells.py read_prototype: Read DeepBasket with 59 compartments
+2014-07-29 21:22:14,388 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/TCR.p
+2014-07-29 21:22:14,388 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,388 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,389 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.095
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,389 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,389 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,389 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.095
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,389 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.095
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,389 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,389 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.035
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,389 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,389 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.095
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.095
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.095
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.095
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,390 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.095
+2014-07-29 21:22:14,390 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,391 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.095
+2014-07-29 21:22:14,391 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,391 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.095
+2014-07-29 21:22:14,391 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,391 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,391 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,391 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,391 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,391 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.095
+2014-07-29 21:22:14,412 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/TCR.depths
+2014-07-29 21:22:14,412 DEBUG traub2005 cells.py read_prototype: Read TCR with 137 compartments
+2014-07-29 21:22:14,412 DEBUG traub2005 cells.py read_prototype: Reading prototype file /home/vivek/moose_git/Demos/traub_2005/py/proto/nRT.p
+2014-07-29 21:22:14,412 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2[0].Ek = 0.05
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_DP[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_DP[0].Ek = -0.1
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_TCR[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF_SS[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF_SS[0].Ek = 0.05
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP_SLOWER[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP_SLOWER[0].Ek = -0.1
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC_FAST[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC_FAST[0].Ek = -0.1
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaPF[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaPF[0].Ek = 0.05
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/AR[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/AR[0].Ek = -0.04
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaPool[0]
+2014-07-29 21:22:14,413 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT_A[0]
+2014-07-29 21:22:14,413 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT_A[0].Ek = 0.125
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF2_nRT[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF2_nRT[0].Ek = 0.05
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA_IB[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA_IB[0].Ek = -0.1
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KA[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KA[0].Ek = -0.1
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KC[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KC[0].Ek = -0.1
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF_TCR[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF_TCR[0].Ek = 0.05
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaF[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaF[0].Ek = 0.05
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaT[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaT[0].Ek = 0.125
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/K2[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/K2[0].Ek = -0.1
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KAHP[0]
+2014-07-29 21:22:14,414 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KAHP[0].Ek = -0.1
+2014-07-29 21:22:14,414 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KM[0]
+2014-07-29 21:22:14,415 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KM[0].Ek = -0.1
+2014-07-29 21:22:14,415 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR_FS[0]
+2014-07-29 21:22:14,415 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR_FS[0].Ek = -0.1
+2014-07-29 21:22:14,415 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/NaP[0]
+2014-07-29 21:22:14,415 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/NaP[0].Ek = 0.05
+2014-07-29 21:22:14,415 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/CaL[0]
+2014-07-29 21:22:14,415 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/CaL[0].Ek = 0.125
+2014-07-29 21:22:14,415 INFO traub2005 cells.py adjust_chanlib: adjusting properties of /library[0]/KDR[0]
+2014-07-29 21:22:14,415 DEBUG traub2005 cells.py adjust_chanlib: /library[0]/KDR[0].Ek = -0.1
+2014-07-29 21:22:14,425 INFO traub2005 cells.py read_keyvals: No such file /home/vivek/moose_git/Demos/traub_2005/py/proto/nRT.depths
+2014-07-29 21:22:14,425 DEBUG traub2005 cells.py read_prototype: Read nRT with 59 compartments
+2014-07-29 21:22:14,436 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/AR[0] Ek = -0.035
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/CaL[0] Ek = 0.125
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/CaT[0] Ek = 0.125
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/K2[0] Ek = -0.095
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/KA[0] Ek = -0.095
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/KAHP_SLOWER[0] Ek = -0.095
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/KC[0] Ek = -0.095
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/KDR[0] Ek = -0.095
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/KM[0] Ek = -0.095
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/NaF_TCR[0] Ek = 0.05
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/NaPF_TCR[0] Ek = 0.05
+2014-07-29 21:22:14,437 DEBUG traub2005 cell_test_util.py setUp: /test225365180906526238954200705816172240378[0]/model[0]/TCR[0]/comp_1[0]/CaPool[0] tau = 0.05
+2014-07-29 21:22:14,437 INFO traub2005 cell_test_util.py schedule: Scheduling: simdt=1e-06, plotdt=0.00025, solver=ee
+2014-07-29 21:22:14,551 INFO traub2005 cell_test_util.py runsim: running: simtime=0.1, stepsize=0.1, pulsearray=[[0.05, 0.02, 1e-09], [1000000000.0, 0, 0]]
+2014-07-29 21:22:14,551 INFO traub2005 cell_test_util.py runsim: pulse[0]: delay=0.05, width=0.02, level=1e-09
+2014-07-29 21:22:14,551 INFO traub2005 cell_test_util.py runsim: pulse[1]: delay=1e+09, width=0, level=0
+2014-07-29 21:22:14,551 INFO traub2005 cell_test_util.py runsim: Start reinit
+2014-07-29 21:22:14,551 INFO traub2005 cell_test_util.py schedule: Scheduling: simdt=1e-06, plotdt=0.00025, solver=ee
+2014-07-29 21:22:14,790 INFO traub2005 cell_test_util.py runsim: Finished reinit
+2014-07-29 21:22:14,791 INFO traub2005 utils.py stepRun: Starting simulation for 0.1

@@ -18,10 +18,10 @@ class GpuLookupTable
 	public:
 
 		double min_, max_, dx_;
-		double result_[1000]; //Hardcoded value. Check .cu file for the excuse
+		double *result_; //Hardcoded value. Check .cu file for the excuse
 		unsigned int nPts_, nColumns_;
 
-		double *min_d, *max_d, *dx_d, *result_d;
+		double *min_d, *max_d, *dx_d, *istate_d, *result_d;
 		unsigned int *nPts_d, *nColumns_d;
 		double *table_d;
 
@@ -32,7 +32,7 @@ class GpuLookupTable
 
 		void findRow(double *V, double *rows, int size);
 		
-		void lookup(double *row, double *column, unsigned int set_size);
+		void lookup(double *row, double *column, double *istate, double dt, unsigned int set_size);
 
 		void sayHi();
 		

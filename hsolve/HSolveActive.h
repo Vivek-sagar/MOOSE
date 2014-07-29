@@ -68,8 +68,11 @@ protected:
     int                       caDiv_;
 
     int lazyLookup_index;
+    double lazyLookup_dt;
+    //TODO: Remove hardcoded values!
     double lazyLookup_iva[1000];
     double lazyLookup_cols[1000];
+    double lazyLookup_istate[1000];
 
     /**
      * Internal data structures. Will also be accessed in derived class HSolve.

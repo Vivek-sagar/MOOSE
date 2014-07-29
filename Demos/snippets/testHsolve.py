@@ -284,6 +284,7 @@ def test_elec_alone():
     moose.reinit()
     moose.start( runTime )
     dump_plots( 'instab.plot' )
+    print "||||", len(moose.wildcardFind('/##[ISA=HHChannel]'))
     # make Hsolver and rerun
     hsolve = moose.HSolve( '/n/hsolve' )
     moose.useClock( 1, '/n/hsolve', 'process' )
@@ -302,6 +303,7 @@ def test_elec_alone():
 
 def main():
     test_elec_alone()
+    print moose.wildcardFind('/##[ISA=Compartment]')
 
 if __name__ == '__main__':
     main()
