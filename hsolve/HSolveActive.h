@@ -69,7 +69,7 @@ protected:
 
     int lazyLookup_index;
     double lazyLookup_dt;
-    //TODO: Remove hardcoded values!
+    
     double lazyLookup_iva[1000];
     double lazyLookup_cols[1000];
     double lazyLookup_istate[1000];

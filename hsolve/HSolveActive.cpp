@@ -52,6 +52,11 @@ void HSolveActive::step( ProcPtr info )
     {
         current_.resize( channel_.size() );
     }
+
+    // lazyLookup_cols = new double[V_.size()];
+    // lazyLookup_iva = new double[V_.size()];
+    // lazyLookup_index = new double[V_.size()];
+
     advanceChannels( info->dt );
 
     // std::cout << "LazyLookup Index : " << lazyLookup_index << "\n";
@@ -59,9 +64,13 @@ void HSolveActive::step( ProcPtr info )
     double *rows;
     rows = (double *)malloc(lazyLookup_index*sizeof(double));
 
-    // gpu_.findRow( &lazyLookup_iva[0], &rows[0], lazyLookup_index);
-    // gpu_.lookup(&rows[0], &lazyLookup_cols[0], &lazyLookup_istate[0], lazyLookup_dt, lazyLookup_index);
+    gpu_.findRow( &lazyLookup_iva[0], &rows[0], lazyLookup_index);
+    gpu_.lookup(&rows[0], &lazyLookup_cols[0], &lazyLookup_istate[0], lazyLookup_dt, lazyLookup_index);
     lazyLookup_index = 0;
+
+    // delete [] lazyLookup_cols;
+    // delete [] lazyLookup_iva;
+    // delete [] lazyLookup_istate;
 
     calculateChannelCurrents();
     updateMatrix();
@@ -294,17 +303,18 @@ void HSolveActive::advanceChannels( double dt )
                 istates[0] = *istate;
                 istates[1] = *istate;
 
-                gpu_.findRow(&iva[0], rows, 2);
-                gpu_.lookup(&rows[0], &cols[0], &istates[0], dt, 2);
+                gpu_.findRow(&iva[0], rows, 1);
+                gpu_.lookup(&rows[0], &cols[0], &istates[0], dt, 1);
 
                 lazyLookup_cols[lazyLookup_index] = GpuColumn_[index];
-                lazyLookup_cols[lazyLookup_index+1] = GpuColumn_[index]+1;
+                std::cout << "Column is : " << GpuColumn_[index] << "\n";
+                //lazyLookup_cols[lazyLookup_index+1] = GpuColumn_[index]+1;
                 lazyLookup_iva[lazyLookup_index] = iv[0];
-                lazyLookup_iva[lazyLookup_index+1] = iv[0];
+                //lazyLookup_iva[lazyLookup_index+1] = iv[0];
                 lazyLookup_istate[lazyLookup_index] = *istate;
-                lazyLookup_istate[lazyLookup_index+1] = *istate;
+                //lazyLookup_istate[lazyLookup_index+1] = *istate;
 
-                lazyLookup_index += 2;
+                lazyLookup_index += 1;
 
                 if ( ichan->instant_ & INSTANT_X )
                     *istate = C1 / C2;

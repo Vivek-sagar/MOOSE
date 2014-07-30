@@ -18,7 +18,6 @@ class GpuLookupTable
 	public:
 
 		double min_, max_, dx_;
-		double *result_; //Hardcoded value. Check .cu file for the excuse
 		unsigned int nPts_, nColumns_;
 
 		double *min_d, *max_d, *dx_d, *istate_d, *result_d;

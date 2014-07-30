@@ -14,6 +14,8 @@ __global__ void lookup_kernel(double *row_array, double *column_array, double *t
 
 	double *a = table_d, *b = table_d;
 
+	// result_d[tId] = *a;
+
 	a += (int)(row + column * (*nRows_d));
 	b += (int)(row + column * (*nRows_d) + *nRows_d);
 
@@ -22,6 +24,12 @@ __global__ void lookup_kernel(double *row_array, double *column_array, double *t
 
 	double temp = 1.0 + dt / 2.0 * C2;
     result_d[tId] = ( istate[tId] * ( 2.0 - temp ) + dt * C1 ) / temp; 
+}
+
+__global__ void do_nothing(double *result_d)
+{
+	int tId = threadIdx.x;
+	result_d[tId] = 0;
 }
 
 
@@ -47,8 +55,6 @@ GpuLookupTable::GpuLookupTable(double *min, double *max, int *nDivs, unsigned in
 	cudaMalloc((void **)&dx_d, sizeof(double));
 	cudaMalloc((void **)&nColumns_d, sizeof(unsigned int));
 
-	//Hardcoded. Max number of parallel lookups is 1000. BAD IDEA!
-	
 
  	cudaMemcpy( min_d, min, sizeof(double), cudaMemcpyHostToDevice);
  	cudaMemcpy( max_d, max, sizeof(double), cudaMemcpyHostToDevice);
@@ -91,8 +97,14 @@ void GpuLookupTable::sayHi()
 
 void GpuLookupTable::addColumns(int species, double *C1, double *C2)
 {
+	double *table_temp_d;
 
-	cudaMalloc((void **)&table_d, (nPts_ * nColumns_) * sizeof(double));
+	cudaMalloc((void **)&table_temp_d, (nPts_ * (nColumns_+2)) * sizeof(double));
+
+	cudaMemcpy(table_temp_d, table_d, (nPts_ * (nColumns_)) * sizeof(double), cudaMemcpyDeviceToDevice);
+
+	cudaFree(table_d);
+	table_d = table_temp_d;
 
 	//Get iTable to point to last element in the table
 	double *iTable = table_d + (nPts_ * nColumns_);
@@ -119,6 +131,8 @@ void GpuLookupTable::addColumns(int species, double *C1, double *C2)
 	iTable++;
 
 	nColumns_ += 2;
+
+
 }
 
 void GpuLookupTable::lookup(double *row, double *column, double *istate, double dt, unsigned int set_size)
@@ -131,9 +145,17 @@ void GpuLookupTable::lookup(double *row, double *column, double *istate, double 
 	// 	row[i] = (double)(int)row[i];		//Taking only the integer part
 	// 	std::cout << "Gpu Lookup on : " << row[i] << ":" << column[i]<< "\n";
 	// }
- 
-	result_ = new double[set_size];
+
+	double *result_ = new double[set_size];
+	// double result_[1000];
+
+
 	cudaMalloc((void **)&result_d, set_size*sizeof(double));
+
+	for (int i=0; i<set_size; i++)
+	{
+		result_[i] = 1;
+	}
 
 	cudaMalloc((void **)&row_array_d, set_size*sizeof(double));
 	cudaMalloc((void **)&column_array_d, set_size*sizeof(double));
@@ -144,7 +166,7 @@ void GpuLookupTable::lookup(double *row, double *column, double *istate, double 
 	cudaMemcpy(istate_d, istate, set_size*sizeof(double), cudaMemcpyHostToDevice);
 
 	lookup_kernel<<<1,set_size>>>(row_array_d, column_array_d, table_d, nPts_d, nColumns_d, istate_d, dt, result_d);
-	
+	// do_nothing<<<1, set_size>>>(result_d);
 	cudaMemcpy(result_, result_d, set_size*sizeof(double), cudaMemcpyDeviceToHost);
 
 	std::cout << "Gpu Lookup result :  "; 
