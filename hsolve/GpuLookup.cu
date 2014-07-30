@@ -14,8 +14,6 @@ __global__ void lookup_kernel(double *row_array, double *column_array, double *t
 
 	double *a = table_d, *b = table_d;
 
-	// result_d[tId] = *a;
-
 	a += (int)(row + column * (*nRows_d));
 	b += (int)(row + column * (*nRows_d) + *nRows_d);
 
@@ -101,8 +99,10 @@ void GpuLookupTable::addColumns(int species, double *C1, double *C2)
 
 	cudaMalloc((void **)&table_temp_d, (nPts_ * (nColumns_+2)) * sizeof(double));
 
+	//Copy old values to new table
 	cudaMemcpy(table_temp_d, table_d, (nPts_ * (nColumns_)) * sizeof(double), cudaMemcpyDeviceToDevice);
 
+	//Free memory occupied by the old table
 	cudaFree(table_d);
 	table_d = table_temp_d;
 
@@ -135,27 +135,14 @@ void GpuLookupTable::addColumns(int species, double *C1, double *C2)
 
 }
 
-void GpuLookupTable::lookup(double *row, double *column, double *istate, double dt, unsigned int set_size)
+void GpuLookupTable::lookup(double *row, double *column, double *istate, double dt, unsigned int set_size, double *result)
 {
 	double *row_array_d;
 	double *column_array_d;
 
-	// for (int i=0; i<set_size; i++)
-	// {
-	// 	row[i] = (double)(int)row[i];		//Taking only the integer part
-	// 	std::cout << "Gpu Lookup on : " << row[i] << ":" << column[i]<< "\n";
-	// }
-
-	double *result_ = new double[set_size];
-	// double result_[1000];
-
+	result_ = new double[set_size];
 
 	cudaMalloc((void **)&result_d, set_size*sizeof(double));
-
-	for (int i=0; i<set_size; i++)
-	{
-		result_[i] = 1;
-	}
 
 	cudaMalloc((void **)&row_array_d, set_size*sizeof(double));
 	cudaMalloc((void **)&column_array_d, set_size*sizeof(double));
@@ -166,13 +153,13 @@ void GpuLookupTable::lookup(double *row, double *column, double *istate, double 
 	cudaMemcpy(istate_d, istate, set_size*sizeof(double), cudaMemcpyHostToDevice);
 
 	lookup_kernel<<<1,set_size>>>(row_array_d, column_array_d, table_d, nPts_d, nColumns_d, istate_d, dt, result_d);
-	// do_nothing<<<1, set_size>>>(result_d);
+
 	cudaMemcpy(result_, result_d, set_size*sizeof(double), cudaMemcpyDeviceToHost);
 
 	std::cout << "Gpu Lookup result :  "; 
 	for (int i=0; i<set_size; i++)
 		std::cout << result_[i] << " ";
 	std::cout << "\n";
-	delete [] result_;
 
+	cudaMemcpy(result, result_, set_size*sizeof(double), cudaMemcpyHostToHost);
 }

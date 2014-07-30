@@ -20,7 +20,7 @@ class GpuLookupTable
 		double min_, max_, dx_;
 		unsigned int nPts_, nColumns_;
 
-		double *min_d, *max_d, *dx_d, *istate_d, *result_d;
+		double *min_d, *max_d, *dx_d, *istate_d, *result_d, *result_;
 		unsigned int *nPts_d, *nColumns_d;
 		double *table_d;
 
@@ -31,7 +31,7 @@ class GpuLookupTable
 
 		void findRow(double *V, double *rows, int size);
 		
-		void lookup(double *row, double *column, double *istate, double dt, unsigned int set_size);
+		void lookup(double *row, double *column, double *istate, double dt, unsigned int set_size, double *result);
 
 		void sayHi();
 		
