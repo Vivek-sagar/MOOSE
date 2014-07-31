@@ -31,7 +31,7 @@ class GpuLookupTable
 
 		void findRow(double *V, double *rows, int size);
 		
-		void lookup(double *row, double *column, double *istate, double dt, unsigned int set_size, double *result);
+		void lookup(double *row, double *column, double *istate, double dt, unsigned int set_size);
 
 		void sayHi();
 		

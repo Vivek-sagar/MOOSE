@@ -2,7 +2,7 @@
 #include <iostream>
 #include "GpuLookup.h"
 
-__global__ void lookup_kernel(double *row_array, double *column_array, double *table_d, unsigned int *nRows_d, unsigned int *nColumns_d, double *istate, double dt, double *result_d)
+__global__ void lookup_kernel(double *row_array, double *column_array, double *table_d, unsigned int *nRows_d, unsigned int *nColumns_d, double *istate, double dt)
 {
 
 	int tId = threadIdx.x;
@@ -21,7 +21,7 @@ __global__ void lookup_kernel(double *row_array, double *column_array, double *t
 	double C2 = *b + (*(b+1) - *b) * fraction;
 
 	double temp = 1.0 + dt / 2.0 * C2;
-    result_d[tId] = ( istate[tId] * ( 2.0 - temp ) + dt * C1 ) / temp; 
+    istate[tId] = ( istate[tId] * ( 2.0 - temp ) + dt * C1 ) / temp; 
 }
 
 __global__ void do_nothing(double *result_d)
@@ -135,14 +135,14 @@ void GpuLookupTable::addColumns(int species, double *C1, double *C2)
 
 }
 
-void GpuLookupTable::lookup(double *row, double *column, double *istate, double dt, unsigned int set_size, double *result)
+void GpuLookupTable::lookup(double *row, double *column, double *istate, double dt, unsigned int set_size)
 {
 	double *row_array_d;
 	double *column_array_d;
 
-	result_ = new double[set_size];
+	// result_ = new double[set_size];
 
-	cudaMalloc((void **)&result_d, set_size*sizeof(double));
+	// cudaMalloc((void **)&result_d, set_size*sizeof(double));
 
 	cudaMalloc((void **)&row_array_d, set_size*sizeof(double));
 	cudaMalloc((void **)&column_array_d, set_size*sizeof(double));
@@ -152,14 +152,15 @@ void GpuLookupTable::lookup(double *row, double *column, double *istate, double 
 	cudaMemcpy(column_array_d, column, set_size*sizeof(double), cudaMemcpyHostToDevice);
 	cudaMemcpy(istate_d, istate, set_size*sizeof(double), cudaMemcpyHostToDevice);
 
-	lookup_kernel<<<1,set_size>>>(row_array_d, column_array_d, table_d, nPts_d, nColumns_d, istate_d, dt, result_d);
+	lookup_kernel<<<1,set_size>>>(row_array_d, column_array_d, table_d, nPts_d, nColumns_d, istate_d, dt);
 
-	cudaMemcpy(result_, result_d, set_size*sizeof(double), cudaMemcpyDeviceToHost);
+	// cudaMemcpy(result_, result_d, set_size*sizeof(double), cudaMemcpyDeviceToHost);
 
-	std::cout << "Gpu Lookup result :  "; 
-	for (int i=0; i<set_size; i++)
-		std::cout << result_[i] << " ";
-	std::cout << "\n";
+	// std::cout << "Gpu Lookup result :  "; 
+	// for (int i=0; i<set_size; i++)
+	// 	std::cout << result_[i] << " ";
+	// std::cout << "\n";
 
-	cudaMemcpy(result, result_, set_size*sizeof(double), cudaMemcpyHostToHost);
+	// cudaMemcpy(result, result_, set_size*sizeof(double), cudaMemcpyHostToHost);
+	cudaMemcpy(istate, istate_d, set_size*sizeof(double), cudaMemcpyDeviceToHost);
 }

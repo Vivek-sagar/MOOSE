@@ -60,12 +60,12 @@ void HSolveActive::step( ProcPtr info )
     result = (double *)malloc(lazyLookup_index*sizeof(double));
 
     gpu_.findRow( &lazyLookup_iva[0], &rows[0], lazyLookup_index);
-    gpu_.lookup(&rows[0], &lazyLookup_cols[0], &lazyLookup_istate[0], lazyLookup_dt, lazyLookup_index, &result[0]);
+    gpu_.lookup(&rows[0], &lazyLookup_cols[0], &lazyLookup_istate[0], lazyLookup_dt, lazyLookup_index);
 
     vector< double >::iterator istate = state_.begin();
     for (int i=0; i<lazyLookup_index; i++)
     {
-        *istate = result[i];
+        *istate = lazyLookup_istate[i];
         istate++;
     }
 
@@ -281,71 +281,24 @@ void HSolveActive::advanceChannels( double dt )
         {
             if ( ichan->Xpower_ > 0.0 )
             {
-                std::cout << "\nReached loop\n"; 
-                vTable_.lookup( *icolumn, vRow, C1, C2 );
-                std::cout << "Normal lookup gives : " << C1 << " " << C2 << "\n";
-
-                //~ *istate = *istate * C1 + C2;
-                //~ *istate = ( C1 + ( 2 - C2 ) * *istate ) / C2;
-
-                // double cols[2];
-                // cols[0] = GpuColumn_[index];
-                // cols[1] = GpuColumn_[index]+1;
-
-                // double iva[2];
-                // iva[0] = iv[0];
-                // iva[1] = iv[0];
-
-                // double istates[2];
-                // istates[0] = *istate;
-                // istates[1] = *istate;
-
-                // gpu_.findRow(&iva[0], rows, 1);
-                // gpu_.lookup(&rows[0], &cols[0], &istates[0], dt, 1);
 
                 lazyLookup_cols[lazyLookup_index] = GpuColumn_[index];
                 lazyLookup_iva[lazyLookup_index] = iv[0];
                 lazyLookup_istate[lazyLookup_index] = *istate;
 
-                lazyLookup_index += 1;
-
-                // if ( ichan->instant_ & INSTANT_X )
-                //     *istate = C1 / C2;
-                // else
-                // {
-                //     double temp = 1.0 + dt / 2.0 * C2;
-                //     *istate = ( *istate * ( 2.0 - temp ) + dt * C1 ) / temp;
-                // }
-
-                std::cout << "Normally updated state is : " << *istate << "\n";
-
-                ++icolumn, ++istate;
+                ++lazyLookup_index;
+                ++istate;
                 ++index;
             }
 
             if ( ichan->Ypower_ > 0.0 )
             {
-                vTable_.lookup( *icolumn, vRow, C1, C2 );
-                //~ *istate = *istate * C1 + C2;
-                //~ *istate = ( C1 + ( 2 - C2 ) * *istate ) / C2;
-
                 lazyLookup_cols[lazyLookup_index] = GpuColumn_[index];
                 lazyLookup_iva[lazyLookup_index] = iv[0];
                 lazyLookup_istate[lazyLookup_index] = *istate;
 
-                lazyLookup_index += 1;
-
-                // if ( ichan->instant_ & INSTANT_Y )
-                //     *istate = C1 / C2;
-                // else
-                // {
-                //     double temp = 1.0 + dt / 2.0 * C2;
-                //     *istate = ( *istate * ( 2.0 - temp ) + dt * C1 ) / temp;
-                // }
-
-                std::cout << "Normally updated state for Y is : " << *istate << "\n";
-
-                ++icolumn, ++istate;
+                ++lazyLookup_index;
+                ++istate;
                 ++index;
             }
 
