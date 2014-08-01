@@ -70,9 +70,9 @@ protected:
     int lazyLookup_index;
     double lazyLookup_dt;
     
-    double lazyLookup_iva[1000];
-    double lazyLookup_cols[1000];
-    double lazyLookup_istate[1000];
+    double *lazyLookup_iva;
+    double *lazyLookup_cols;
+    double *lazyLookup_istate;
 
     /**
      * Internal data structures. Will also be accessed in derived class HSolve.

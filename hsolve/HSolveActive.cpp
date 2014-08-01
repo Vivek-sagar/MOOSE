@@ -35,6 +35,10 @@ HSolveActive::HSolveActive()
     caAdvance_ = 1;
     lazyLookup_index = 0;
 
+    lazyLookup_cols = 0;
+    lazyLookup_iva = 0;
+    lazyLookup_istate = 0;
+
     // Default lookup table size
     //~ vDiv_ = 3000;    // for voltage
     //~ caDiv_ = 3000;   // for calcium
@@ -248,6 +252,17 @@ void HSolveActive::advanceChannels( double dt )
     vector< LookupRow* >::iterator icarow = caRow_.begin();
 
     lazyLookup_dt = dt;
+
+    if (lazyLookup_cols != 0)
+    {
+        delete [] lazyLookup_cols;
+        delete [] lazyLookup_iva;
+        delete [] lazyLookup_istate;
+    }
+
+    lazyLookup_cols = new double(V_.size());
+    lazyLookup_iva = new double(V_.size());
+    lazyLookup_istate = new double(V_.size());
 
     LookupRow vRow;
     double C1, C2;
