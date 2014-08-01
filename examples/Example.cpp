@@ -99,17 +99,9 @@ Example::Example()
 
 void Example::process( const Eref& e, ProcPtr p )
 {
-    //Iterative summation from 1 to n
-    int count = 0;
-    for (int i=1; i<y_; i++)
-    {
-        count += i;
-    }
-    x_ = count;
-
-    //Parallel summation from 1 to n, using a GpuInterface object
-    gpu.setY(y_);
-    std::cout << gpu.calculateSum()<<std::endl;
+    output_ = x_ + y_;
+    printf("%f\n", output_);
+    output()->send( e, output_ );
 }
 
 void Example::reinit( const Eref& e, ProcPtr p )

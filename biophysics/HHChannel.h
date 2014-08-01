@@ -1,7 +1,5 @@
 #ifndef _HHChannel_h
 #define _HHChannel_h
-
-
 /**********************************************************************
 ** This program is part of 'MOOSE', the
 ** Messaging Object Oriented Simulation Environment,
@@ -223,7 +221,6 @@ class HHChannel: public ChanBase
 		double Y_;
 		/// State variable for Z gate
 		double Z_;
-
 
         bool xInited_, yInited_, zInited_; // true when a state variable
         	// has been initialized

@@ -293,7 +293,7 @@ ifdef USE_MPI
 #	PARALLEL_DIR = parallel
 #	PARALLEL_LIB = parallel/parallel.o
 else
-	CXX = g++ -fPIC
+	CXX = g++
 #	CXX = CC	# Choose between Solaris CC and g++ on a Solaris machine
 endif
 

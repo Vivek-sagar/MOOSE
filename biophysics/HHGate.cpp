@@ -274,7 +274,6 @@ double HHGate::lookupB( double v ) const
 
 void HHGate::lookupBoth( double v, double* A, double* B ) const
 {
-/*
 	if ( v <= xmin_ ) {
 		*A = A_[0];
 		*B = B_[0];
@@ -294,8 +293,6 @@ void HHGate::lookupBoth( double v, double* A, double* B ) const
 			*B = B_[ index ];
 		}
 	}
-*/
-	gpu_.lookupTables(v, A, B);
 }
 
 vector< double > HHGate::getAlpha( const Eref& e) const 
@@ -643,10 +640,6 @@ void HHGate::setupTables( const vector< double >& parms, bool doTau )
 			prevBentry = B_[i];
 		}
 	}
-
-	//Store table data in GPU memory
-	gpu_.setupTables(&A_[0], &B_[0], A_.size(), B_.size(), &xmin_, &xmax_, &invDx_); 
-
 }
 
 /**

@@ -13,11 +13,12 @@ __credits__          = ["NCBS Bangalore", "Bhalla Lab"]
 __license__          = "GPL"
 __version__          = "1.0.0"
 __maintainer__       = "Dilawar Singh"
-__email__            = "dilawars@iitb.ac.in"
+__email__            = "dilawars@ncbs.res.in"
 __status__           = "Development"
 
 import _moose
 import print_utils
+import verification_utils 
 
 def recordTarget(tablePath, target, field = 'vm', **kwargs):
     """Setup a table to record at given path.
@@ -69,3 +70,7 @@ def recordTarget(tablePath, target, field = 'vm', **kwargs):
     return table
 
  
+def run(simTime, verify=False):
+    if verify:
+        verification_utils.verify()
+    _moose.start(simTime)

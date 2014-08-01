@@ -89,7 +89,8 @@ class MoosePlugin(MoosePluginBase):
     def getEditorView(self):
         if not hasattr(self, 'editorView'):
             self.editorView = MooseEditorView(self)
-            # self.editorView.getCentralWidget().editObject.connect(self.mainWindow.objectEditSlot)
+            #signal to objecteditor from default plugin
+            self.editorView.getCentralWidget().editObject.connect(self.mainWindow.objectEditSlot)
             self.currentView = self.editorView
         return self.editorView
 
@@ -322,11 +323,11 @@ class RunView(RunBase):
     def setDataRoot(self, path):        
         self.dataRoot = path
         self.getCentralWidget().setDataRoot(path)
-        self.getSchedulingDockWidget().widget().setDataRoot(path)
+        #self.getSchedulingDockWidget().widget().setDataRoot(path)
 
     def setModelRoot(self, path):
         self.modelRoot = path
-        self.getSchedulingDockWidget().widget().setModelRoot(path)
+        #self.getSchedulingDockWidget().widget().setModelRoot(path)
         self.getCentralWidget().setModelRoot(path)
 
     def getDataTablesPane(self):
@@ -357,7 +358,6 @@ class RunView(RunBase):
         widget.simtimeExtended.connect(self._centralWidget.extendXAxes)
         widget.runner.resetAndRun.connect(self._centralWidget.plotAllData)
         return self.schedulingDockWidget
-    
 
 class MooseRunner(QtCore.QObject):
     """Helper class to control simulation execution
@@ -424,8 +424,6 @@ class MooseRunner(QtCore.QObject):
     def stop(self):
         """Pause simulation"""
         self._pause = True
-
-
 
 class SchedulingWidget(QtGui.QWidget):
     """Widget for scheduling.
@@ -533,14 +531,20 @@ class SchedulingWidget(QtGui.QWidget):
         If updateInterval is less than the smallest dt, then make it
         equal.
         """
-        try:
+        '''try:
             self.updateInterval = float(str(self.updateIntervalText.text()))
         except ValueError:
             QtGui.QMessageBox.warning(self, 'Invalid value', 'Specified plot update interval is meaningless.')
-        dt = min(self.getTickDtMap().values())
+        '''
+        #Harsha: Atleast for loading signalling model in the GSL method, the updateInterval need to be atleast
+        #        equal to the min TickDt and not zero.
+        tickDt = self.getTickDtMap().values()
+        tickDt = [item for item in self.getTickDtMap().values() if float(item) != 0.0]
+        dt = max(tickDt)
+        #dt = min(self.getTickDtMap().values())
         if dt > self.updateInterval:
-            self.updateInterval = dt
-            self.updateIntervalText.setText(str(dt))
+            self.updateInterval = dt*10
+            #self.updateIntervalText.setText(str(dt))
 
     # def disableButton(self):
     #     """ When RunAndResetButton,continueButton,RunTillEndButton are clicked then disabling these buttons
@@ -559,7 +563,7 @@ class SchedulingWidget(QtGui.QWidget):
     def resetAndRunSlot(self):
         """This is just for adding the arguments for the function
         MooseRunner.resetAndRun"""
-        #self.updateUpdateInterval()
+        self.updateUpdateInterval()
         tickDtMap = self.getTickDtMap()
         tickTargetsMap = self.getTickTargets()
         simtime = self.getSimTime()
@@ -732,9 +736,9 @@ class PlotWidget(QtGui.QWidget):
         #global canvas
         #canvas = self.canvas
         self.navToolbar = NavigationToolbar(self.canvas, self)
-        layout = QtGui.QVBoxLayout()
-        layout.addWidget(self.canvas)
-        layout.addWidget(self.navToolbar)
+        layout = QtGui.QGridLayout()
+        layout.addWidget(self.canvas,0,1)
+        layout.addWidget(self.navToolbar,1,1)
         self.setLayout(layout)
         self.modelRoot = '/'
         self.pathToLine = defaultdict(set)

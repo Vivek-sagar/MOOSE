@@ -288,16 +288,18 @@ void Dsolve::setStoich( Id id )
 	path_ = Field< string >::get( stoich_, "path" );
 
 	for ( unsigned int i = 0; i < poolMap_.size(); ++i ) {
-		if ( poolMap_[i] != ~0U ) {
+		unsigned int poolIndex = poolMap_[i];
+		if ( poolIndex < pools_.size() ) {
+			// assert( poolIndex < pools_.size() );
 			Id pid( i + poolMapStart_ );
 			assert( pid.element()->cinfo()->isA( "PoolBase" ) );
 			PoolBase* pb = 
 					reinterpret_cast< PoolBase* >( pid.eref().data());
 			double diffConst = pb->getDiffConst( pid.eref() );
 			double motorConst = pb->getMotorConst( pid.eref() );
-			pools_[ poolMap_[i] ].setId( pid.value() );
-			pools_[ poolMap_[i] ].setDiffConst( diffConst );
-			pools_[ poolMap_[i] ].setMotorConst( motorConst );
+			pools_[ poolIndex ].setId( pid.value() );
+			pools_[ poolIndex ].setDiffConst( diffConst );
+			pools_[ poolIndex ].setMotorConst( motorConst );
 		}
 	}
 }
@@ -570,37 +572,56 @@ unsigned int Dsolve::convertIdToPoolIndex( const Eref& e ) const
 
 void Dsolve::setN( const Eref& e, double v )
 {
+	unsigned int pid = convertIdToPoolIndex( e );
+	// Ignore silently, as this may be a valid pid for the ksolve to use.
+	if ( pid >= pools_.size() )  
+		return;
 	unsigned int vox = e.dataIndex();
-	if ( vox < numVoxels_ )
-		pools_[ convertIdToPoolIndex( e ) ].setN( vox, v );
-	else 
-		cout << "Warning: Dsolve::setN: Eref out of range\n";
+	if ( vox < numVoxels_ ) {
+		pools_[ pid ].setN( vox, v );
+		return;
+	}
+	cout << "Warning: Dsolve::setN: Eref " << e << " out of range " <<
+			pools_.size() << ", " << numVoxels_ << "\n";
 }
 
 double Dsolve::getN( const Eref& e ) const
 {
+	unsigned int pid = convertIdToPoolIndex( e );
+	if ( pid >= pools_.size() ) return 0.0; // ignore silently
 	unsigned int vox = e.dataIndex();
-	if ( vox <  numVoxels_ )
-		return pools_[ convertIdToPoolIndex( e ) ].getN( vox );
-	cout << "Warning: Dsolve::getN: Eref out of range\n";
+	if ( vox <  numVoxels_ ) {
+		return pools_[ pid ].getN( vox );
+	}
+	cout << "Warning: Dsolve::setN: Eref " << e << " out of range " <<
+			pools_.size() << ", " << numVoxels_ << "\n";
 	return 0.0;
 }
 
 void Dsolve::setNinit( const Eref& e, double v )
 {
+	unsigned int pid = convertIdToPoolIndex( e );
+	if ( pid >= pools_.size() )  // Ignore silently
+		return;
 	unsigned int vox = e.dataIndex();
-	if ( vox < numVoxels_ )
-		pools_[ convertIdToPoolIndex( e ) ].setNinit( vox, v );
-	else 
-		cout << "Warning: Dsolve::setNinit: Eref out of range\n";
+	if ( vox < numVoxels_ ) {
+		pools_[ pid ].setNinit( vox, v );
+		return;
+	}
+	cout << "Warning: Dsolve::setNinit: Eref " << e << " out of range " <<
+			pools_.size() << ", " << numVoxels_ << "\n";
 }
 
 double Dsolve::getNinit( const Eref& e ) const
 {
+	unsigned int pid = convertIdToPoolIndex( e );
+	if ( pid >= pools_.size() ) return 0.0; // ignore silently
 	unsigned int vox = e.dataIndex();
-	if ( vox < numVoxels_ )
-		return pools_[ convertIdToPoolIndex( e ) ].getNinit( vox );
-	cout << "Warning: Dsolve::getNinit: Eref out of range\n";
+	if ( vox < numVoxels_ ) {
+		return pools_[ pid ].getNinit( vox );
+	}
+	cout << "Warning: Dsolve::setNinit: Eref " << e << " out of range " <<
+			pools_.size() << ", " << numVoxels_ << "\n";
 	return 0.0;
 }
 
@@ -639,6 +660,7 @@ unsigned int Dsolve::getNumPools() const
 	return numTotPools_;
 }
 
+// July 2014: This is half-baked wrt the startPool.
 void Dsolve::getBlock( vector< double >& values ) const
 {
 	unsigned int startVoxel = values[0];
@@ -673,6 +695,7 @@ void Dsolve::setBlock( const vector< double >& values )
 	assert( startVoxel + numVoxels <= numVoxels_ );
 	assert( startPool >= poolStartIndex_ );
 	assert( numPools + startPool <= numLocalPools_ );
+	assert( values.size() == 4 + numVoxels * numPools );
 
 	for ( unsigned int i = 0; i < numPools; ++i ) {
 		unsigned int j = i + startPool;
@@ -682,4 +705,10 @@ void Dsolve::setBlock( const vector< double >& values )
 			pools_[ j - poolStartIndex_ ].setNvec( startVoxel, numVoxels, q );
 		}
 	}
+}
+
+void Dsolve::setupCrossSolverReacs( const map< Id, 
+						vector< Id > >& xr, Id otherStoich )
+{
+	;
 }

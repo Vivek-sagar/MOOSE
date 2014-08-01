@@ -11,6 +11,7 @@ TARGET = _trials.o
 
 OBJ = \
 	Example.o	\
+	Ex.o	\
 
 HEADERS = \
 	../basecode/header.h \
@@ -19,6 +20,7 @@ default: $(TARGET)
 
 $(OBJ)	: $(HEADERS)
 Example.o: Example.h ../basecode/ElementValueFinfo.h
+Ex.o: Ex.h
 
 .cpp.o:
 	$(CXX) $(CXXFLAGS) $(SMOLDYN_FLAGS) -I. -I../basecode -I../msg $< -c

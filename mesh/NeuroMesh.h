@@ -184,7 +184,7 @@ class NeuroMesh: public MeshCompt
 			const Eref& e, 
 			unsigned int numNodes, unsigned int numThreads );
 
-		void transmitChange( const Eref& e, double oldVol );
+		// void transmitChange( const Eref& e, double oldVol );
 
 		/**
 		 * Helper function for buildStencil, calculates diffusion term
@@ -201,9 +201,6 @@ class NeuroMesh: public MeshCompt
 		//////////////////////////////////////////////////////////////////
 		
 		void matchMeshEntries( const ChemCompt* other, 
-			vector< VoxelJunction > & ret ) const;
-
-		void matchSpineMeshEntries( const ChemCompt* other, 
 			vector< VoxelJunction > & ret ) const;
 
 		void matchCubeMeshEntries( const ChemCompt* other, 
